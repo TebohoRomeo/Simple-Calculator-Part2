@@ -6,10 +6,10 @@ class Calculator {
     this.lastNum = 0;
     this.slot = [];
   }
-  
+
   add(...args) {
     let sum = 0;
-    
+
     for (let num of args) {
       if (num == 'Last') {
         num = this.last();
@@ -20,9 +20,7 @@ class Calculator {
       }
     }
 
-    this.lastNum = sum;
     this.slot.push(sum);
-
     return sum;
   }
 
@@ -38,9 +36,8 @@ class Calculator {
         product *= num;
       }
     }
-    this.lastNum = product;
+    
     this.slot.push(product);
-
     return product;
   }
 
